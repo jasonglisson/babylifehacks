@@ -31,8 +31,14 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		<?php if ( is_front_page() ) { ?>
 			<meta property="og:title" content="BabyLifeHacks.com"/>
-		<?php } else { ?>
-			<meta property="og:title" content="<?php echo wp_strip_all_tags(get_post_field('post_content', $id)); ?>"/>		
+		<?php } else { 
+				if (get_field('submitted_by', $post->ID)) { ?>
+					<meta property="og:title" content="<?php echo 'Baby Life Hack #' . $post->ID . ' - Submitted By ' . get_field('submitted_by', $post->ID);?>" />
+			<?php } else { ?>
+					<meta property="og:title" content="<?php echo 'Baby Life Hack #' . $post->ID;?>" />				
+			<?php } ?>
+
+<!-- 			<meta property="og:title" content="<?php echo wp_strip_all_tags(get_post_field('post_content', $id)); ?>"/>	 -->		
 		<?php } ?>
 		<?php 
 			$category = get_the_category($post->ID);

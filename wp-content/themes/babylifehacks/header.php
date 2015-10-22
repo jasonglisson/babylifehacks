@@ -45,7 +45,28 @@
 			foreach($category as $cat) {
 				if($cat->slug == 'bathing'): ?>
 					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/bathing.jpg"/>					
-				<?php endif;
+			<?php elseif($cat->slug == 'cleaning'): ?>
+					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/cleaning.jpg"/>					
+			<?php elseif($cat->slug == 'clothing'): ?>
+					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/clothing.jpg"/>					
+			<?php elseif($cat->slug == 'crying-calming'): ?>
+					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/calming.jpg"/>					
+			<?php elseif($cat->slug == 'diapers'): ?>
+					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/diapers.jpg"/>					
+			<?php elseif($cat->slug == 'feeding'): ?>
+					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/feeding.jpg"/>					
+			<?php elseif($cat->slug == 'mommy-health'): ?>															
+					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/mommy-health.jpg"/>					
+			<?php elseif($cat->slug == 'nursing'): ?>			
+					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/nursing.jpg"/>
+			<?php elseif($cat->slug == 'playing'): ?>			
+					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/playing.jpg"/>			
+			<?php elseif($cat->slug == 'sleeping'): ?>			
+					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/sleeping.jpg"/>	
+			<?php elseif($cat->slug == 'teething'): ?>			
+					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/teething.jpg"/>											<?php elseif($cat->slug == 'transportation'): ?>			
+					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/transportation.jpg"/>	
+			<?php endif; 					
 			}
 		?>				
 		<meta property="og:site_name" content="BabyLifeHacks.com"/>

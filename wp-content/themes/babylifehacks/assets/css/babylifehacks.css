@@ -276,6 +276,11 @@ h1, h2, h3, h4, h5, h6 {
 .nursing .icon-text, .nursing .hack-num {
   color: #FF7892; }
 
+.playing i {
+  background: url(../images/baby-icons/Rattle.png); }
+.playing .icon-text, .playing .hack-num {
+  color: #F8C063; }
+
 .sleeping i {
   background: url(../images/baby-icons/Sleep.png); }
 .sleeping .icon-text, .sleeping .hack-num {

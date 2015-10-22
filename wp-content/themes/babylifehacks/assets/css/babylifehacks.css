@@ -1,14 +1,31 @@
-@import url(https://fonts.googleapis.com/css?family=Lobster+Two);
+@font-face {
+  font-family: 'grand_hotelregular';
+  src: url('../fonts/grandhotel-regular-webfont.eot');
+  src: url('../fonts/grandhotel-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/grandhotel-regular-webfont.woff2') format('woff2'), url('../fonts/grandhotel-regular-webfont.woff') format('woff'), url('../fonts/grandhotel-regular-webfont.ttf') format('truetype'), url('../fonts/grandhotel-regular-webfont.svg#grand_hotelregular') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lobster Two', cursive; }
+  font-family: 'grand_hotelregular'; }
+
+.page-title {
+  position: relative;
+  text-align: center;
+  color: #3185cb; }
 
 .header {
   border-top: 5px solid #3185cb; }
   .header .contain-to-grid {
-    background: #8fc0ea;
-    padding: 25px 0; }
+    background: #8fc0ea url(../images/clouds.png) center no-repeat;
+    padding: 40px 0; }
     .header .contain-to-grid .top-bar {
       background: #8fc0ea; }
+  .header .title-area li a {
+    background: url("../images/logo.png") no-repeat 0px 0px transparent;
+    padding: 27px 100px;
+    margin-top: -37px;
+    position: relative;
+    color: rgba(255, 255, 255, 0); }
 
 #top-post-wrap {
   background: #fcf5d5;
@@ -18,10 +35,54 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 15px; }
   #top-post-wrap #top-post .top-blog-post {
     padding: 20px; }
+    #top-post-wrap #top-post .top-blog-post #s-share-buttons {
+      float: left; }
+    #top-post-wrap #top-post .top-blog-post .mail {
+      background: url(/wp-content/plugins/simple-social-share/images/share-email.png);
+      width: 65px;
+      float: left;
+      display: block;
+      background-repeat: no-repeat;
+      color: rgba(255, 255, 255, 0); }
+    #top-post-wrap #top-post .top-blog-post .tweet {
+      background: url(../images/tweet.png) 0px -4px;
+      width: 65px;
+      float: left;
+      display: block;
+      background-repeat: no-repeat;
+      color: rgba(255, 255, 255, 0); }
+    #top-post-wrap #top-post .top-blog-post .url span {
+      font-size: 10px;
+      background: url(../images/url.png) 0px 0px no-repeat;
+      color: #3185cb;
+      margin-left: 5px;
+      float: left;
+      height: 24px;
+      width: 24px;
+      display: block; }
   #top-post-wrap #top-post .top-blog-post:first-of-type {
-    border-right: 1px solid #f4ebc0; }
+    border-right: 2px solid #f4ebc0; }
   #top-post-wrap #top-post .top-blog-post:last-of-type {
-    border-left: 1px solid #f4ebc0; }
+    border-left: 2px solid #f4ebc0; }
+  #top-post-wrap #top-post h2 {
+    position: relative;
+    text-align: center;
+    color: #3185cb; }
+    #top-post-wrap #top-post h2 span {
+      background: #fcf5d5;
+      padding: 0 15px;
+      position: relative;
+      z-index: 1; }
+  #top-post-wrap #top-post h2:before {
+    background: #f4ebc0;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    width: 100%; }
+  #top-post-wrap #top-post h2:before {
+    left: 0; }
 
 #sidebar1 #search-4 {
   margin: 0;
@@ -105,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 85%;
   background-repeat: no-repeat;
   margin-left: 18px; }
-.home .post .post-icon span {
+.home .post .post-icon .icon-text {
   font-size: 0.65rem;
   text-align: center;
   width: 100%;
@@ -132,61 +193,80 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     background-repeat: no-repeat;
     color: rgba(255, 255, 255, 0); }
+  .home .post .post-text .url span {
+    font-size: 10px;
+    background: url(../images/url.png) 0px 0px no-repeat;
+    color: #3185cb;
+    margin-left: 5px;
+    float: left;
+    height: 24px;
+    width: 24px;
+    display: block; }
+  .home .post .post-text .comments {
+    font-size: 13px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 2px;
+    color: #3185cb; }
 
 .bathing i {
   background: url(../images/baby-icons/Bathtub.png); }
-.bathing span {
+.bathing .icon-text {
   color: #44BFD7; }
 
 .crying-calming i {
   background: url(../images/baby-icons/Pacifier.png); }
-.crying-calming span {
+.crying-calming .icon-text {
   color: #4FBE80; }
 
 .cleaning i {
   background: url(../images/baby-icons/Cleaning.png); }
-.cleaning span {
+.cleaning .icon-text {
   color: #44BFD7; }
 
 .clothing i {
   background: url(../images/baby-icons/Sleepsuit.png); }
-.clothing span {
+.clothing .icon-text {
   color: #F8C063; }
 
 .diapers i {
   background: url(../images/baby-icons/Diaper.png); }
-.diapers span {
+.diapers .icon-text {
   color: #F8C063; }
 
 .feeding i {
   background: url(../images/baby-icons/Cutlery.png); }
-.feeding span {
+.feeding .icon-text {
   color: #F8C063; }
 
 .mommy-health i {
   background: url(../images/baby-icons/Butterfly.png); }
-.mommy-health span {
+.mommy-health .icon-text {
   color: #F8C063; }
 
 .nursing i {
   background: url(../images/baby-icons/Nursing.png); }
-.nursing span {
+.nursing .icon-text {
   color: #FF7892; }
 
 .sleeping i {
   background: url(../images/baby-icons/Sleep.png); }
-.sleeping span {
+.sleeping .icon-text {
   color: #D29CCC; }
 
 .teething i {
   background: url(../images/baby-icons/Teething.png); }
-.teething span {
+.teething .icon-text {
   color: #FF7892; }
 
 .transportation i {
   background: url(../images/baby-icons/Stroller.png); }
-.transportation span {
+.transportation .icon-text {
   color: #F8C063; }
+
+#comments {
+  display: none;
+  visibility: hidden; }
 
 #above-footer {
   background: #8fc0ea;

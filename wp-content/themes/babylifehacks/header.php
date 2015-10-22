@@ -10,7 +10,7 @@
 		<?php if ( is_front_page() ) { ?>
 		<title>BabyLifeHacks.com | Helping parents help their kids.</title>
 		<?php } else { ?>
-		<title>BabyLifeHacks.com | <?php echo wp_strip_all_tags(get_post_field('post_content', $id)); ?></title>		
+		<title>BabyLifeHacks.com | Baby Life Hack #<?php echo the_ID(); ?></title>		
 		<?php } ?>		
 		<!-- Google Chrome Frame for IE -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -32,7 +32,7 @@
 		<?php if ( is_front_page() ) { ?>
 			<meta property="og:title" content="BabyLifeHacks.com"/>
 		<?php } else { ?>
-			<meta property="og:title" content="<?php the_title(); ?>"/>		
+			<meta property="og:title" content="<?php echo wp_strip_all_tags(get_post_field('post_content', $id)); ?>"/>		
 		<?php } ?>
 		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/library/images/fb-share.jpg"/>
 		<meta property="og:site_name" content="BabyLifeHacks.com"/>

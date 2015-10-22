@@ -38,6 +38,7 @@ h1,h2,h3,h4,h5,h6 {
 	}
 	.title-area li a{
 		background: url("../images/logo.png") no-repeat 0px 0px transparent;
+		background-size: 100%;
 		padding: 27px 100px;
 		margin-top: -37px;
 		position: relative;
@@ -379,6 +380,55 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 // Single Post
+
+.single {
+	.main{
+		font-size:20px;
+		padding-bottom:25px;
+		border-bottom: 1px solid #fee6b4;
+	}
+	h2 {
+		color:#3185cb;
+		border-bottom: 1px solid #fee6b4;	
+		padding-bottom:15px;	
+		margin-bottom: 20px;		
+	}	
+	.article-header {
+		display: none;
+	}
+	h3 + p {
+		display: none;
+	}
+	#s-share-buttons {
+		float:left;
+	}
+	.mail {
+		background: url(/wp-content/plugins/simple-social-share/images/share-email.png);
+		width: 65px;
+		float:left;
+		display: block;
+		background-repeat: no-repeat;
+		color: rgba(255, 255, 255, 0);
+	}
+	.tweet {
+		background: url(../images/tweet.png) 0px -4px;				
+		width: 65px;
+		float:left;
+		display: block;
+		background-repeat: no-repeat;
+		color: rgba(255, 255, 255, 0);				
+	}
+	.url span{
+		font-size:10px; 
+		background: url(../images/url.png) 0px 0px no-repeat;					
+		color:#3185cb;
+		margin-left:5px;
+		float:left;
+		height: 24px;
+		width: 24px;
+		display: block;
+	}	
+}
 
 #comments {
 	display: none;

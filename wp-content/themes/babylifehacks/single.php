@@ -5,17 +5,16 @@
 				<div id="inner-content" class="row">
 			
 					<div id="main" class="large-8 medium-8 columns first" role="main">
+						<h2>Baby Life Hack #<?php echo the_ID(); ?></h2>
+					<?php
+						echo '<div class="main">' . wp_strip_all_tags(get_post_field('post_content')) .'</div><br>';	
+						echo do_shortcode('[simple-social-share]');
+						echo '<a class="tweet" href="https://twitter.com/intent/tweet?text=' . substr(strip_tags(get_the_content()),0,75) . '...&hashtags=babylifehacks&url=' . wp_get_shortlink() . '" target="_blank">Tweet</a>';
+						echo '<a class="mail" href="mailto:?subject=' . substr(strip_tags(get_the_content()),0,75) . '...&amp;body=' . substr(strip_tags(get_the_content()),0,75) . '...Read the rest of this tip on BabyLifeHacks.com here: ' . wp_get_shortlink() . '">Mail</a>';
+						echo '<div class="url"><a href="' . wp_get_shortlink() . '" target="_blank"><span title="' . wp_get_shortlink() . '"></span></a></div><br><br>';
+						echo do_shortcode('[fbcomments]');
+					?>
 					
-					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					
-					    	<?php get_template_part( 'parts/loop', 'single' ); ?>
-					    	
-					    <?php endwhile; else : ?>
-					
-					   		<?php get_template_part( 'parts/content', 'missing' ); ?>
-
-					    <?php endif; ?>
-			
 					</div> <!-- end #main -->
     
 					<?php get_sidebar(); ?>

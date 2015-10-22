@@ -148,10 +148,18 @@ h1, h2, h3, h4, h5, h6 {
     #sidebar1 #categories-2 ul li {
       margin-right: 10px;
       border-bottom: 1px solid #fee6b4;
-      padding: 5px 2.14em 5px 0;
-      color: #FF7892; }
+      padding: 5px 0;
+      color: #FF7892;
+      float: left;
+      width: 94%; }
       #sidebar1 #categories-2 ul li a {
-        color: #3185cb; }
+        color: #3185cb;
+        display: block;
+        width: 100%;
+        transition: 0.3s all; }
+        #sidebar1 #categories-2 ul li a:hover {
+          color: #44BFD7;
+          padding-left: 2px; }
     #sidebar1 #categories-2 ul li:last-of-type {
       border-bottom: 0px solid #fee6b4; }
 
@@ -160,41 +168,56 @@ h1, h2, h3, h4, h5, h6 {
   background: #8fc0ea;
   border-top: 5px solid #3185cb; }
 
-.home .post .post-icon i {
+.home h1, .search h1 {
+  color: #3185cb; }
+.home .post .submitted-wrap, .search .post .submitted-wrap {
+  float: left;
+  width: 100%;
+  font-size: 13px;
+  color: #3185cb;
+  margin-bottom: 10px; }
+  .home .post .submitted-wrap .submitted-by, .search .post .submitted-wrap .submitted-by {
+    float: left; }
+.home .post .post-icon i, .search .post .post-icon i {
   width: 75px;
   height: 75px;
   display: block;
   background-size: 85%;
   background-repeat: no-repeat;
   margin-left: 18px; }
-.home .post .post-icon .icon-text {
+.home .post .post-icon .icon-text, .search .post .post-icon .icon-text {
   font-size: 0.65rem;
   text-align: center;
   width: 100%;
   display: block; }
-.home .post .post-text {
+.home .post .post-icon .hack-num, .search .post .post-icon .hack-num {
+  text-align: center;
+  font-size: 13px;
+  padding-top: 10px; }
+.home .post .post-text, .search .post .post-text {
   padding-bottom: 25px;
   border-bottom: 1px solid #fee6b4;
   margin-bottom: 25px; }
-  .home .post .post-text p {
-    font-size: 1.2rem; }
-  .home .post .post-text #s-share-buttons {
+  .home .post .post-text p, .search .post .post-text p {
+    font-size: 1.2rem;
+    margin: 0 0 10px 0; }
+  .home .post .post-text #s-share-buttons, .search .post .post-text #s-share-buttons {
     float: left; }
-  .home .post .post-text .mail {
+  .home .post .post-text .mail, .search .post .post-text .mail {
     background: url(/wp-content/plugins/simple-social-share/images/share-email.png);
     width: 65px;
     float: left;
     display: block;
     background-repeat: no-repeat;
     color: rgba(255, 255, 255, 0); }
-  .home .post .post-text .tweet {
+  .home .post .post-text .tweet, .search .post .post-text .tweet {
     background: url(../images/tweet.png) 0px -4px;
     width: 65px;
     float: left;
     display: block;
     background-repeat: no-repeat;
     color: rgba(255, 255, 255, 0); }
-  .home .post .post-text .url span {
+  .home .post .post-text .url span, .search .post .post-text .url span {
     font-size: 10px;
     background: url(../images/url.png) 0px 0px no-repeat;
     color: #3185cb;
@@ -203,73 +226,76 @@ h1, h2, h3, h4, h5, h6 {
     height: 24px;
     width: 24px;
     display: block; }
-  .home .post .post-text .comments {
+  .home .post .post-text .comments, .search .post .post-text .comments {
     font-size: 13px;
     float: left;
     margin-left: 5px;
     margin-top: 2px;
     color: #3185cb; }
 
+.search .post-icon i {
+  margin-left: 12px !important; }
+
 .bathing i {
   background: url(../images/baby-icons/Bathtub.png); }
-.bathing .icon-text {
+.bathing .icon-text, .bathing .hack-num {
   color: #44BFD7; }
 
 .crying-calming i {
   background: url(../images/baby-icons/Pacifier.png); }
-.crying-calming .icon-text {
+.crying-calming .icon-text, .crying-calming .hack-num {
   color: #4FBE80; }
 
 .cleaning i {
   background: url(../images/baby-icons/Cleaning.png); }
-.cleaning .icon-text {
+.cleaning .icon-text, .cleaning .hack-num {
   color: #44BFD7; }
 
 .clothing i {
   background: url(../images/baby-icons/Sleepsuit.png); }
-.clothing .icon-text {
+.clothing .icon-text, .clothing .hack-num {
   color: #F8C063; }
 
 .diapers i {
   background: url(../images/baby-icons/Diaper.png); }
-.diapers .icon-text {
+.diapers .icon-text, .diapers .hack-num {
   color: #F8C063; }
 
 .feeding i {
   background: url(../images/baby-icons/Cutlery.png); }
-.feeding .icon-text {
+.feeding .icon-text, .feeding .hack-num {
   color: #F8C063; }
 
 .mommy-health i {
   background: url(../images/baby-icons/Butterfly.png); }
-.mommy-health .icon-text {
+.mommy-health .icon-text, .mommy-health .hack-num {
   color: #F8C063; }
 
 .nursing i {
   background: url(../images/baby-icons/Nursing.png); }
-.nursing .icon-text {
+.nursing .icon-text, .nursing .hack-num {
   color: #FF7892; }
 
 .sleeping i {
   background: url(../images/baby-icons/Sleep.png); }
-.sleeping .icon-text {
+.sleeping .icon-text, .sleeping .hack-num {
   color: #D29CCC; }
 
 .teething i {
   background: url(../images/baby-icons/Teething.png); }
-.teething .icon-text {
+.teething .icon-text, .teething .hack-num {
   color: #FF7892; }
 
 .transportation i {
   background: url(../images/baby-icons/Stroller.png); }
-.transportation .icon-text {
+.transportation .icon-text, .transportation .hack-num {
   color: #F8C063; }
 
 .single .main {
   font-size: 20px;
   padding-bottom: 25px;
   border-bottom: 1px solid #fee6b4; }
-.single h2 {
+.single h3 {
   color: #3185cb;
   border-bottom: 1px solid #fee6b4;
   padding-bottom: 15px;

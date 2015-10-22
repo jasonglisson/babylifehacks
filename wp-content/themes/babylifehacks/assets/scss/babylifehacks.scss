@@ -192,10 +192,19 @@ h1,h2,h3,h4,h5,h6 {
 			li {
 				margin-right: 10px;
 				border-bottom: 1px solid #fee6b4;
-				padding: 5px 2.14em 5px 0;
-				color:#FF7892;
+				padding: 5px 0;
+				color: #FF7892;
+				float: left;
+				width: 94%;
 				a {
 					color: #3185cb;
+					display: block;
+					width: 100%;
+					transition: .3s all;
+					&:hover {
+						color:#44BFD7;
+						padding-left:2px;
+					}
 				}
 			}
 			li:last-of-type {
@@ -215,8 +224,21 @@ h1,h2,h3,h4,h5,h6 {
 
 // Homepage
 
-.home {
+.home, .search{
+	h1 {
+		color:#3185cb;
+	}
 	.post {
+		.submitted-wrap {
+			float:left;
+			width: 100%;
+			font-size: 13px;
+			color: #3185cb;	
+			margin-bottom: 10px;		
+			.submitted-by {
+				float: left;
+			}
+		}
 		.post-icon {
 			i {
 				width: 75px;
@@ -232,13 +254,19 @@ h1,h2,h3,h4,h5,h6 {
 				width: 100%;
 				display: block;
 			}
+			.hack-num {
+				text-align: center;
+				font-size: 13px;
+				padding-top: 10px;			
+			}
 		}
 		.post-text {
 			padding-bottom:25px;
 			border-bottom: 1px solid #fee6b4;
 			margin-bottom:25px;
 			p {
-				font-size:1.2rem;				
+				font-size:1.2rem;
+				margin:0 0 10px 0;				
 			}
 			#s-share-buttons {
 				float:left;
@@ -280,11 +308,19 @@ h1,h2,h3,h4,h5,h6 {
 	}
 }
 
+.search {
+	.post-icon {
+		i {
+			margin-left: 12px !important;			
+		}
+	}
+}
+
 .bathing {
 	i {
 		background:url(../images/baby-icons/Bathtub.png);
 	}
-	.icon-text {
+	.icon-text, .hack-num {
 		color: #44BFD7;
 	}
 }
@@ -293,7 +329,7 @@ h1,h2,h3,h4,h5,h6 {
 	i {
 		background:url(../images/baby-icons/Pacifier.png);
 	}
-	.icon-text {
+	.icon-text, .hack-num {
 		color: #4FBE80;		
 	}	
 }
@@ -302,7 +338,7 @@ h1,h2,h3,h4,h5,h6 {
 	i {
 		background:url(../images/baby-icons/Cleaning.png);
 	}
-	.icon-text {
+	.icon-text, .hack-num {
 		color: #44BFD7;		
 	}	
 }
@@ -311,7 +347,7 @@ h1,h2,h3,h4,h5,h6 {
 	i {
 		background:url(../images/baby-icons/Sleepsuit.png);
 	}
-	.icon-text {
+	.icon-text, .hack-num {
 		color: #F8C063;		
 	}
 }
@@ -320,7 +356,7 @@ h1,h2,h3,h4,h5,h6 {
 	i {
 		background:url(../images/baby-icons/Diaper.png);
 	}
-	.icon-text {
+	.icon-text, .hack-num {
 		color: #F8C063;		
 	}		
 }
@@ -329,7 +365,7 @@ h1,h2,h3,h4,h5,h6 {
 	i {
 		background:url(../images/baby-icons/Cutlery.png);
 	}	
-	.icon-text {
+	.icon-text, .hack-num {
 		color: #F8C063;		
 	}	
 }
@@ -338,7 +374,7 @@ h1,h2,h3,h4,h5,h6 {
 	i {
 		background:url(../images/baby-icons/Butterfly.png);
 	}	
-	.icon-text {
+	.icon-text, .hack-num {
 		color: #F8C063;		
 	}	
 }
@@ -347,7 +383,7 @@ h1,h2,h3,h4,h5,h6 {
 	i {
 		background:url(../images/baby-icons/Nursing.png);
 	}	
-	.icon-text {
+	.icon-text, .hack-num {
 		color: #FF7892;			
 	}	
 }
@@ -356,7 +392,7 @@ h1,h2,h3,h4,h5,h6 {
 	i {
 		background:url(../images/baby-icons/Sleep.png);		
 	}
-	.icon-text {
+	.icon-text, .hack-num {
 		color: #D29CCC;		
 	}	
 }
@@ -365,7 +401,7 @@ h1,h2,h3,h4,h5,h6 {
 	i {
 		background:url(../images/baby-icons/Teething.png);		
 	}
-	.icon-text {
+	.icon-text, .hack-num {
 		color: #FF7892;		
 	}	
 }
@@ -374,7 +410,7 @@ h1,h2,h3,h4,h5,h6 {
 	i {
 		background:url(../images/baby-icons/Stroller.png);		
 	}
-	.icon-text {
+	.icon-text, .hack-num {
 		color: #F8C063;		
 	}	
 }
@@ -387,7 +423,7 @@ h1,h2,h3,h4,h5,h6 {
 		padding-bottom:25px;
 		border-bottom: 1px solid #fee6b4;
 	}
-	h2 {
+	h3 {
 		color:#3185cb;
 		border-bottom: 1px solid #fee6b4;	
 		padding-bottom:15px;	

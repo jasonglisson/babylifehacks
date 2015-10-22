@@ -34,7 +34,14 @@
 		<?php } else { ?>
 			<meta property="og:title" content="<?php echo wp_strip_all_tags(get_post_field('post_content', $id)); ?>"/>		
 		<?php } ?>
-		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/library/images/fb-share.jpg"/>
+		<?php 
+			$category = get_the_category($post->ID);
+			foreach($category as $cat) {
+				if($cat->slug == 'bathing'): ?>
+					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/bathing.jpg"/>					
+				<?php endif;
+			}
+		?>				
 		<meta property="og:site_name" content="BabyLifeHacks.com"/>
 		<?php if ( is_single() ) { ?>		
 		<meta property="og:description" content="<?php echo wp_strip_all_tags(get_post_field('post_content', $id)); ?>">

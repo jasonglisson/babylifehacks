@@ -5,7 +5,11 @@
 				<div id="inner-content" class="row">
 			
 					<div id="main" class="large-8 medium-8 columns first" role="main">
-						<h2>Baby Life Hack #<?php echo the_ID(); ?></h2>
+						<h3>Baby Life Hack #<?php echo the_ID();
+							if (get_field('submitted_by', $post->ID)) { 
+								echo ' - Submitted By ' . get_field('submitted_by', $post->ID);
+							}?>
+						</h3>
 					<?php
 						echo '<div class="main">' . wp_strip_all_tags(get_the_content()) .'</div><br>';	
 						echo do_shortcode('[simple-social-share]');

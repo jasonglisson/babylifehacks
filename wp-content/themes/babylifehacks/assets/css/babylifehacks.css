@@ -251,7 +251,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 13px;
   padding-top: 10px; }
 .home .post .post-text, .search .post .post-text {
-  padding-bottom: 25px;
+  padding-bottom: 55px;
   border-bottom: 1px solid #fee6b4;
   margin-bottom: 25px; }
   .home .post .post-text p, .search .post .post-text p {

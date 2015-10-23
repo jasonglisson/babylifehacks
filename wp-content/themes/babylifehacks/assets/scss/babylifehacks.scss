@@ -306,7 +306,7 @@ h1,h2,h3,h4,h5,h6 {
 
 // Homepage
 
-.home, .search{
+.home, .search, .archive{
 	h1 {
 		color:#3185cb;
 	}
@@ -390,7 +390,7 @@ h1,h2,h3,h4,h5,h6 {
 	}
 }
 
-.search {
+.search, .archive {
 	.post-icon {
 		i {
 			margin-left: 12px !important;			

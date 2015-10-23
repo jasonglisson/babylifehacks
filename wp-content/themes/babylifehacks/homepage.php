@@ -7,7 +7,7 @@ Template Name: Homepage
 <?php get_header(); ?>
 			
 			<div id="content">
-				<div id="top-post-wrap">
+				<div id="top-post-wrap" class="show-for-medium-up">
 					<div id="top-post" class="row">	
 						<h2><span>Popular Baby Life Hacks</span></h2>	
 <!--
@@ -33,7 +33,6 @@ Template Name: Homepage
 						// Display the widget
 						echo $before_widget;
 						if ( $defaults['title'] ) echo $before_title . $defaults['title'] . $after_title;
-						echo '<ul>';
 						global $post;
 						foreach ( $posts as $post ):
 							setup_postdata( $post );
@@ -46,7 +45,6 @@ Template Name: Homepage
  								echo '<div class="url"><a href="' . wp_get_shortlink() . '" target="_blank"><span title="' . wp_get_shortlink() . '"></span></a></div>';								
 							echo '</div>';				
 						endforeach;
-						echo '</ul>';
 						echo $after_widget;
 						
 						// Reset post data

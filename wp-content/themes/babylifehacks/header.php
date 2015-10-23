@@ -86,9 +86,17 @@
 			<div class="inner-wrap">
 				<div id="container">
 					<header class="header" role="banner">
-							
+						<div class="social-wrap">
+							<div class="row show-for-large-only">
+								<div class="social-links">
+									<a class="feed" href="http://babylifehacks.com/feed/" target="_blank" title="Feed">Feed</a>
+									<a class="twitter" href="https://twitter.com/babylifehacks" target="_blank" title="Twitter">Twitter</a>									
+									<a class="facebook" href="https://www.facebook.com/babylifehacks" target="_blank" title="Facebook">Facebook</a>
+								</div>
+							</div>	
+						</div>	
 						 <!-- This navs will be applied to the topbar, above all content 
 							  To see additional nav styles, visit the /parts directory -->
 						 <?php get_template_part( 'parts/nav', 'top-offcanvas' ); ?>
-								 	
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/top-mobile.jpg" class="show-for-small-only">
 					</header> <!-- end .header -->

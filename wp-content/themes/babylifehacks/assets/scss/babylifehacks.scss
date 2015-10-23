@@ -25,10 +25,66 @@ h1,h2,h3,h4,h5,h6 {
 	color:#3185cb;	
 }
 
+// Top Menu
+.top-bar-section {
+	ul {
+		li {
+			background:none !important;
+			a {
+				background:none !important;
+				font-size:23px;
+				cursor: pointer;
+				color:#fff;
+				transition: .3s all;
+				&:hover {
+					color:#3185cb;
+					border-bottom:1px dotted #3185cb;
+				}
+			}
+		}
+	}
+}
+.top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {
+	display:none;
+}
+
 // Header
 
 .header {
-	border-top:5px solid #3185cb;
+// 	border-top:5px solid #3185cb;
+	.tab-bar {
+		background:#3185cb;
+		.left-small {
+			border-right: solid 1px #fff;
+		}
+		h1 {
+			color:#fff;
+		}
+	}
+	.social-wrap {
+		background:#3185cb;
+		.facebook {
+			background-position: 0px 0px;
+		}
+		.twitter {
+			background-position: -30px 0px;
+		}
+		.feed {
+			background-position: -60px 0px;
+		}
+		a {
+			display:block;
+			height:30px;
+			width:30px;
+			float:right;
+			background-image: url(../images/social.png);	
+			background-size: 90px;	
+			background-repeat: no-repeat;
+			text-indent: -9999px;
+			color:rgba(255, 255, 255, 0);		
+			cursor: pointer;	
+		}		
+	}
 	.contain-to-grid {
 		background: #8fc0ea url(../images/clouds.png) center no-repeat;
 		padding: 40px 0;
@@ -212,6 +268,32 @@ h1,h2,h3,h4,h5,h6 {
 			}		
 		}
 	}	
+}
+
+// Off Canvas 
+.left-off-canvas-menu {
+	background: #8fc0ea;
+	#sidebar-offcanvas {
+		padding-top: 15px;
+		h4 {
+			font-size: 35px;			
+		}
+		.screen-reader-text {
+			display:none;
+		}
+		.search-field {
+	    	width: 88%;		
+		}
+		.search-submit {
+			width: 80%;
+			padding: 10px;
+			background-color: #3185cb;
+			border-radius: 9px;		
+		}
+		a {
+			color: #3185CB;			
+		}
+	}
 }
 
 // Page top

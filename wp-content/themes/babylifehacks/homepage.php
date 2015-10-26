@@ -62,7 +62,7 @@ Template Name: Homepage
 									echo '<div class="entry-content post ' . $cat->slug . ' row">';	
 										echo '<div class="post-icon large-2 hide-for-medium hide-for-small columns"><i title="' . $cat->name . '"></i><span class="icon-text">' . $cat->name . '</span><div class="hack-num">#' . $post->ID . '</div></div>';
 										echo '<div class="post-text large-10 medium-12 small-12 columns">';	
-											my_excerpt(35);	
+											echo '<a href="' . get_permalink($post->ID) . '">' . my_excerpt(35) . '</a>';	
 											if (get_field('submitted_by', $post->ID)) {
 												echo '<div class="submitted-wrap"><div class="submitted-by">Submitted By ' . get_field('submitted_by', $post->ID) . '</div></div>';		
 											}												

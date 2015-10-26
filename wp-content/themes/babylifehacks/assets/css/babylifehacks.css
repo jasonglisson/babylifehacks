@@ -292,7 +292,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 25px; }
   .home .post .post-text p, .search .post .post-text p, .archive .post .post-text p, .page-template-popular .post .post-text p {
     font-size: 1.2rem;
-    margin: 0 0 10px 0; }
+    margin: 0 0 10px 0;
+    cursor: pointer;
+    transition: 0.2s all; }
+    .home .post .post-text p:hover, .search .post .post-text p:hover, .archive .post .post-text p:hover, .page-template-popular .post .post-text p:hover {
+      text-decoration: underline; }
   .home .post .post-text #s-share-buttons, .search .post .post-text #s-share-buttons, .archive .post .post-text #s-share-buttons, .page-template-popular .post .post-text #s-share-buttons {
     float: left; }
   .home .post .post-text .mail, .search .post .post-text .mail, .archive .post .post-text .mail, .page-template-popular .post .post-text .mail {

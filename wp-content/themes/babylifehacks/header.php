@@ -54,7 +54,9 @@
 			<?php elseif($cat->slug == 'diapers'): ?>
 					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/diapers.jpg"/>					
 			<?php elseif($cat->slug == 'feeding'): ?>
-					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/feeding.jpg"/>					
+					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/feeding.jpg"/>		
+			<?php elseif($cat->slug == 'the-home'): ?>
+					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/home.jpg"/>									
 			<?php elseif($cat->slug == 'mommy-health'): ?>															
 					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/mommy-health.jpg"/>					
 			<?php elseif($cat->slug == 'nursing'): ?>			
@@ -64,8 +66,11 @@
 			<?php elseif($cat->slug == 'sleeping'): ?>			
 					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/sleeping.jpg"/>	
 			<?php elseif($cat->slug == 'teething'): ?>			
-					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/teething.jpg"/>											<?php elseif($cat->slug == 'transportation'): ?>			
-					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/transportation.jpg"/>	
+					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/teething.jpg"/>											
+			<?php elseif($cat->slug == 'technology'): ?>			
+					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/technology.jpg"/>	
+			<?php elseif($cat->slug == 'transportation'): ?>			
+					<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/share/transportation.jpg"/>					
 			<?php endif; 					
 			}
 		?>				

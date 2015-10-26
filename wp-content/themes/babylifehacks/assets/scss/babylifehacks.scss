@@ -108,11 +108,40 @@ h1,h2,h3,h4,h5,h6 {
 	background: #fcf5d5;
 	border-top: 7px solid #f4ebc0;
 	border-bottom: 7px solid #f4ebc0;
-	padding:15px 0;
-	margin-bottom: 15px;
+	.top-post-text {
+		padding:0;
+		p {
+			font-size: 14px;
+			margin: 0;
+			line-height: 21px;
+		}
+	}
 	#top-post {
 		.top-blog-post {
-			padding:20px;	
+			padding: 20px 12px;
+			height: 135px;
+			display: block;
+			transition: .3s all;
+			cursor: pointer;
+			&:hover {
+				background:#f4ebc0;
+			}			
+			.post-icon {
+				padding:0;					
+				i {
+					background-position: left top;
+					background-size: 90%;
+					background-repeat: no-repeat;
+					height: 62px;
+					width: 52px;
+					display: block;
+					margin: 0;
+					padding: 0;
+				}
+			}			
+			.excerpt-read-more {
+				display:none;
+			}
 			#s-share-buttons {
 				float:left;
 			}
@@ -146,6 +175,9 @@ h1,h2,h3,h4,h5,h6 {
 		.top-blog-post:first-of-type {
 			border-right:2px solid #f4ebc0;
 		}
+		.top-blog-post:nth-of-type(2) {
+			border-right:2px solid #f4ebc0;
+		}		
 		.top-blog-post:last-of-type {
 			border-left:2px solid #f4ebc0;
 		}
@@ -179,6 +211,7 @@ h1,h2,h3,h4,h5,h6 {
 
 // Sidebars
 #sidebar1 {
+	padding-top: 21px;
 	#search-4 {
 		margin: 0;
 		padding: 0;
@@ -306,21 +339,23 @@ h1,h2,h3,h4,h5,h6 {
 
 // Homepage
 
-.home, .search, .archive{
+.home, .search, .archive, .page-template-popular{
 	h1 {
 		color:#3185cb;
 	}
-	.post {
-		.submitted-wrap {
-			float:left;
-			width: 100%;
-			font-size: 13px;
-			color: #3185cb;	
-			margin-bottom: 10px;		
-			.submitted-by {
-				float: left;
-			}
+	.filter {
+		.filter-wrap {
+			float: right;
 		}
+		margin-top: 21px;
+		background-color: #F4F4F4;
+		padding: 8px;
+		margin-bottom: 35px;
+		dd.active a {
+			background: #3185cb;
+		}		
+	}
+	.post {
 		.post-icon {
 			i {
 				width: 75px;
@@ -340,6 +375,16 @@ h1,h2,h3,h4,h5,h6 {
 				text-align: center;
 				font-size: 13px;
 				padding-top: 10px;			
+			}
+		}		
+		.submitted-wrap {
+			float:left;
+			width: 100%;
+			font-size: 13px;
+			color: #3185cb;	
+			margin-bottom: 10px;		
+			.submitted-by {
+				float: left;
 			}
 		}
 		.post-text {
@@ -386,6 +431,10 @@ h1,h2,h3,h4,h5,h6 {
 				margin-top: 2px;	
 				color:#3185cb;							
 			}			
+			.hack-image-link {
+				padding-top: 10px;
+				float: left;				
+			}
 		}
 	}
 }
@@ -452,6 +501,15 @@ h1,h2,h3,h4,h5,h6 {
 	}	
 }
 
+.the-home {
+	i {
+		background:url(../images/baby-icons/House.png);
+	}	
+	.icon-text, .hack-num {
+		color: #caa4cc;		
+	}	
+}
+
 .mommy-health {
 	i {
 		background:url(../images/baby-icons/Butterfly.png);
@@ -482,6 +540,15 @@ h1,h2,h3,h4,h5,h6 {
 .sleeping {
 	i {
 		background:url(../images/baby-icons/Sleep.png);		
+	}
+	.icon-text, .hack-num {
+		color: #D29CCC;		
+	}	
+}
+
+.technology {
+	i {
+		background:url(../images/baby-icons/BabyMonitor.png);		
 	}
 	.icon-text, .hack-num {
 		color: #D29CCC;		

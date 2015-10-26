@@ -1,12 +1,12 @@
 <?php
 /*
-Template Name: Homepage
+Template Name: Popular
 */
 ?>
 
 <?php get_header(); ?>
 			
-			<div id="content">	
+			<div id="content">
 				<div id="top-post-wrap" class="show-for-large-up">
 					<div id="top-post" class="row">
 						<ul class="small-block-grid-2 large-block-grid-4">
@@ -37,27 +37,31 @@ Template Name: Homepage
 					?>
 						</ul>					
 					</div>	
-				</div>				
+				</div>					
 				<div id="inner-content" class="row">
 
 				    <?php get_sidebar('sidebar1'); ?>
 				   <?php // get_sidebar('sidebar2'); ?>				    
 			
-				    <div id="main" class="large-9 medium-9 columns" role="main">					    
+				    <div id="main" class="large-9 medium-9 columns" role="main">
 						<dl class="sub-nav filter">
 							<?php // get_search_form();?>
 						  <div class="filter-wrap">
 							  <dt>View By Most:</dt>
-							  <dd class="active"><a href="/">Recent</a></dd>
-							  <dd><a href="/popular">Popular</a></dd>
+							  <dd><a href="/">Recent</a></dd>
+							  <dd class="active"><a href="/popular">Popular</a></dd>
 						  </div>	  
-						</dl>						
+						</dl>					
 						<?php 
-						$args = wmp_get_popular(array( 'limit' => 3, 'post_type' => 'post', 'range' => 'all_time' ));
-						$loop = new WP_Query( $args );
-							//print_r($loop);
-							while ( $loop->have_posts() ) : $loop->the_post();
-							    $category = get_the_category($post->ID);
+						$posts = wmp_get_popular(array( 'limit' => 9999, 'post_type' => 'post', 'range' => 'all_time' ));
+						
+						// Display the widget
+						echo $before_widget;
+						if ( $defaults['title'] ) echo $before_title . $defaults['title'] . $after_title;
+						global $post;
+						foreach ( $posts as $post ):
+							setup_postdata( $post );
+							$category = get_the_category($post->ID);
 								foreach($category as $cat) {
 									echo '<div class="entry-content post ' . $cat->slug . ' row">';	
 										echo '<div class="post-icon large-2 hide-for-medium hide-for-small columns"><i title="' . $cat->name . '"></i><span class="icon-text">' . $cat->name . '</span><div class="hack-num">#' . $post->ID . '</div></div>';
@@ -77,9 +81,9 @@ Template Name: Homepage
 												<a class="hack-image-link" href="<?php echo get_permalink($post->ID); ?>"><img class="hack-image" src="<?php echo $image['url']; ?>" alt="<?php echo substr(strip_tags(get_the_content()),0,75); ?>" /></a>
 											<?php endif;												
 										echo '</div>';
-									echo '</div>';															
-								}							    							
-							endwhile; 
+									echo '</div>';		
+							}															
+						endforeach;							    							
 						?>	
 					    					
     				</div> <!-- end #main -->

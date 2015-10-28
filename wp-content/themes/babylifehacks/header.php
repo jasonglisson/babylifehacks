@@ -8,10 +8,12 @@
 	<head>
 		<meta charset="utf-8">
 		<?php if ( is_front_page() ) { ?>
-		<title>BabyLifeHacks.com | Helping parents help their kids.</title>
-		<?php } else { ?>
-		<title>BabyLifeHacks.com | Baby Life Hack #<?php echo the_ID(); ?></title>		
-		<?php } ?>		
+		<title>Baby Life Hacks | Helping parents help their kids.</title>
+		<?php } elseif( is_single() ) { ?>
+		<title>Baby Life Hacks | Baby Life Hack #<?php echo the_ID(); ?></title>		
+		<?php } elseif(!is_single() || !is_front_page()) {?>	
+		<title>Baby Life Hacks | <?php echo the_title(); ?></title>		
+		<?php } ?>	
 		<!-- Google Chrome Frame for IE -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 

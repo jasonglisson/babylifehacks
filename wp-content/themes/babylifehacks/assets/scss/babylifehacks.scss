@@ -69,6 +69,9 @@ h1,h2,h3,h4,h5,h6 {
 		.twitter {
 			background-position: -30px 0px;
 		}
+		.pinterest {
+			background-position: -90px 0px;
+		}		
 		.feed {
 			background-position: -60px 0px;
 		}
@@ -78,11 +81,15 @@ h1,h2,h3,h4,h5,h6 {
 			width:30px;
 			float:right;
 			background-image: url(../images/social.png);	
-			background-size: 90px;	
+			background-size: 120px;	
 			background-repeat: no-repeat;
 			text-indent: -9999px;
 			color:rgba(255, 255, 255, 0);		
 			cursor: pointer;	
+			transition: .2s all;
+			&:hover {
+				opacity: .7;
+			}
 		}		
 	}
 	.contain-to-grid {

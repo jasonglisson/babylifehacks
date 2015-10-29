@@ -40,6 +40,8 @@ h1, h2, h3, h4, h5, h6 {
     background-position: 0px 0px; }
   .header .social-wrap .twitter {
     background-position: -30px 0px; }
+  .header .social-wrap .pinterest {
+    background-position: -90px 0px; }
   .header .social-wrap .feed {
     background-position: -60px 0px; }
   .header .social-wrap a {
@@ -48,11 +50,14 @@ h1, h2, h3, h4, h5, h6 {
     width: 30px;
     float: right;
     background-image: url(../images/social.png);
-    background-size: 90px;
+    background-size: 120px;
     background-repeat: no-repeat;
     text-indent: -9999px;
     color: rgba(255, 255, 255, 0);
-    cursor: pointer; }
+    cursor: pointer;
+    transition: 0.2s all; }
+    .header .social-wrap a:hover {
+      opacity: 0.7; }
 .header .contain-to-grid {
   background: #8fc0ea url(../images/clouds.png) center no-repeat;
   padding: 40px 0; }

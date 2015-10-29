@@ -94,10 +94,11 @@
 				<div id="container">
 					<header class="header" role="banner">
 						<div class="social-wrap">
-							<div class="row show-for-large-only">
+							<div class="row show-for-medium-up">
 								<div class="social-links">
 									<a class="feed" href="http://babylifehacks.com/feed/" target="_blank" title="Feed">Feed</a>
-									<a class="twitter" href="https://twitter.com/babylifehacks" target="_blank" title="Twitter">Twitter</a>									
+									<a class="pinterest" href="https://www.pinterest.com/babylifehacks" target="_blank" title="Pinterest">Pinterest</a>											
+									<a class="twitter" href="https://twitter.com/babylifehacks" target="_blank" title="Twitter">Twitter</a>		
 									<a class="facebook" href="https://www.facebook.com/babylifehacks" target="_blank" title="Facebook">Facebook</a>
 								</div>
 							</div>	
